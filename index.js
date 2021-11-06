@@ -9,10 +9,10 @@ const User = require("./User.Model");
 
 app.use(cors());
 
-// app.use(express.static(path.join(__dirname, "/client/build")));
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname + "/client/build/index.html"));
-// });
+app.use(express.static(path.join(__dirname, "/client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 app.use(
   fileUpload({
@@ -22,7 +22,8 @@ app.use(
   })
 );
 
-const db = "mongodb://localhost:27017/uploadFile";
+const db =
+  "mongodb+srv://augmentapp:augmentapp@cluster0.ualqx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose
   .connect(db, {
     useNewUrlParser: true,
