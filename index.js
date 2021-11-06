@@ -23,7 +23,7 @@ app.use(
 );
 
 const db =
-  "mongodb+srv://augmentapp:augmentapp@cluster0.ualqx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://augmentapp:augmentapp@cluster0.ualqx.mongodb.net/fileUpload?retryWrites=true&w=majority";
 mongoose
   .connect(db, {
     useNewUrlParser: true,
